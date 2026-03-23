@@ -1,0 +1,18 @@
+ .c1 {
+    color: blue;
+    font-size: 16px;
+    font-family: 宋体;
+    font-weight: bold;
+}
+
+.c2 {
+    color: black;
+}
+
+.c2:hover {
+    color: red;
+}
+
+.c2:active {
+    color: blue;
+}
