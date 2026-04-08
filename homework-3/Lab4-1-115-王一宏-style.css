@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;  
+    height: 600px; 
+    position: relative; 
+    overflow: hidden;    
+}
+
+.box {
+    position: absolute;
+    background-color: #e0e0e0;
+    padding: 20px;
+    width: 220px;
+    font-size: 14px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    z-index: 5; 
+}
+
+.box h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.box ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+    list-style-type: disc;
+}
+
+.box li {
+    margin-bottom: 5px;
+}
+
+.center-logo {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;    
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+    
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.center-logo img {
+    width: 100%;       
+    height: 100%;      
+    object-fit: contain; 
+    display: block;    
+}
+
+.html5-box {
+    top: 0px;
+    left: 340px;
+}
+
+.css3-box {
+    bottom: 30px;
+    left: 100px;
+}
+
+.js-box {
+    top: 300px;
+    right: 50px;
+}
