@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab5-115-王一宏-styles.css">
+    <title>个人简历表单</title>
+
+</head>
+<body>
+<form>
+<div class="container">
+    <div class="form-title">个人简历</div>
+
+    <div class="flex-row">
+        <div class="left-info">
+            <div class="row">
+                <div class="label">姓名</div>
+                <div class="item"><input type="text" value="王一宏" maxlength="10"></div>
+                <div class="label">性别</div>
+                <div class="item">
+                    <input type="radio" name="gender" checked>男
+                    <input type="radio" name="gender">女
+                </div>
+                <div class="label">年龄</div>
+                <div class="item"><input type="text" value="20"></div>
+            </div>
+
+            <div class="row">
+                <div class="label">📍 籍贯</div>
+                <div class="item"><input type="text" value="山东省济宁市"></div>
+                <div class="label">📞 电话</div>
+                <div class="item"><input type="text" value="15092615131"></div>
+                <div class="label">📧 邮箱</div>
+                <div class="item"><input type="text" value="wyih1221@qq.com"></div>
+            </div>
+
+            <div class="row">
+                <div class="label">🎓 学历</div>
+                <div class="item"><input type="text" value="本科在读"></div>
+                <div class="label">🏥 健康</div>
+                <div class="item"><input type="text" value="良好"></div>
+                <div class="label">💍 婚姻</div>
+                <div class="item"><input type="text" value="未婚"></div>
+            </div>
+        </div>
+
+        <div class="photo-box">
+            <img src="857bd5468484313b5e9590884d57dba0.jpg" alt="照片">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="label">💼 求职意向</div>
+        <div class="item"><input type="text" value="算法工程师" style="width:200px;"></div>
+        <div class="label">💻 专业</div>
+        <div class="item"><input type="text" value="计算机科学与技术"></div>
+        <div class="label">🏫 院校</div>
+        <div class="item"><input type="text" value="烟台理工学院"></div>
+    </div>
+
+    <div class="row multi-row">
+        <div class="label title">技能证书</div>
+        <div class="item content">
+            <textarea>蓝桥杯省级二等奖</textarea>
+        </div>
+    </div>
+
+    <div class="row multi-row">
+        <div class="label title">个人特长与爱好</div>
+        <div class="item content">
+            <textarea>精通 C++ 编程，热爱算法竞赛。业余时间喜欢音乐、游戏，具备良好的团队协作能力和跨学科思考能力。</textarea>
+        </div>
+    </div>
+
+    <div class="row multi-row">
+        <div class="label title">项目经历</div>
+        <div class="item content">
+            <textarea>无。</textarea>
+        </div>
+    </div>
+
+    <div class="row multi-row">
+        <div class="label title">自我评价</div>
+        <div class="item content">
+            <textarea>本人是一名计算机科学专业的二年级本科生，性格开朗、待人真诚。在两年的大学生活中，我建立了扎实的专业基础，不仅熟练掌握了C++、Java等编程语言，更在算法设计与数据结构方面有着深入的钻研。</textarea>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+    </div>
+</div>
+</form>
+</body>
+</html>
