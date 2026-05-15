@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lab9-115-王一宏-styles.css">
+    <title>个人简历</title>
+</head>
+<body>
+
+    <div class="resume-container">
+        <form action="#" method="POST">
+            <h1>📄 个人求职简历</h1>
+
+            <fieldset>
+                <legend>基本信息</legend>
+                
+                <div class="photo-group">
+                    <label>个人照片</label>
+                    <div class="photo-upload-wrapper" title="点击上传更换照片">
+                        <img id="photo-preview-img" class="photo-preview-img" src="857bd5468484313b5e9590884d57dba0.jpg" alt="个人照片" style="display: block;">
+                        <input type="file" id="photo" name="photo" accept="image/*" onchange="previewImage(event)">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" value="王一宏" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">性别</label>
+                        <select id="gender" name="gender">
+                            <option value="男" selected>男</option>
+                            <option value="女">女</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">年龄</label>
+                        <input type="number" id="age" name="age" value="20" min="1" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="hometown">籍贯</label>
+                        <input type="text" id="hometown" name="hometown" value="山东省济宁市">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话</label>
+                        <input type="tel" id="phone" name="phone" value="15092615131">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" value="wyih1221@qq.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="health">健康状况</label>
+                        <input type="text" id="health" name="health" value="良好">
+                    </div>
+                    <div class="form-group">
+                        <label for="marriage">婚姻状况</label>
+                        <select id="marriage" name="marriage">
+                            <option value="未婚" selected>未婚</option>
+                            <option value="已婚">已婚</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>专业能力</legend>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="intention">求职意向</label>
+                        <input type="text" id="intention" name="intention" value="算法工程师">
+                    </div>
+                    <div class="form-group">
+                        <label for="school">毕业学校</label>
+                        <input type="text" id="school" name="school" value="烟台理工学院">
+                    </div>
+                    <div class="form-group">
+                        <label for="education">学历</label>
+                        <select id="education" name="education">
+                            <option value="大专">大专</option>
+                            <option value="本科" selected>本科</option>
+                            <option value="硕士">硕士</option>
+                            <option value="博士">博士</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">专业</label>
+                        <input type="text" id="major" name="major" value="计算机科学与技术">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="certs">技能证书</label>
+                        <textarea id="certs" name="certs" rows="2">第十一届中国高校计算机大赛国赛二等奖
+第十七届蓝桥杯c/c++省赛一等奖
+第十七届蓝桥杯java省赛一等奖
+                        </textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="skills">专业技能</label>
+                        <textarea id="skills" name="skills">精通 C++ 编程，热爱算法竞赛。业余时间喜欢音乐、游戏，具备良好的团队协作能力和跨学科思考能力。</textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="projects">项目经历</label>
+                        <textarea id="projects" name="projects" rows="4">积极参与“互联网+”及中国大学生计算机设计大赛等大型学术科创项目。</textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>综合说明</legend>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="hobbies">个人特长与爱好</label>
+                        <textarea id="hobbies" name="hobbies">热爱算法编程，擅长逻辑解题与代码编写；喜好音乐赏析，具备良好乐感，日常喜欢聆听各类音乐。</textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="evaluation">自我评价</label>
+                        <textarea id="evaluation" name="evaluation" rows="3">本人是一名计算机科学专业的二年级本科生，性格开朗、待人真诚。在两年的大学生活中，
+我建立了扎实的专业基础，不仅熟练掌握了C++、Java等编程语言，更在算法设计与数据结构方面有着深入的钻研。</textarea>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">✈️ 提交简历</button>
+                <button type="reset" class="btn-reset">🔄 重置信息</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const input = event.target;
+            const previewImg = document.getElementById('photo-preview-img');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImg.src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
