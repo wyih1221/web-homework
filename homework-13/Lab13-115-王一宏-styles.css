@@ -1,0 +1,92 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e8ecf1;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: crosshair;
+    line-height: 0;
+}
+
+.image-wrapper img {
+    display: block;
+    max-width: 800px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.magnifier {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+
+    box-shadow:
+      0 0 0 9999px rgba(0, 0, 0, 0.55),
+      inset 0 0 6px rgba(0, 0, 0, 0.15);
+
+    background-repeat: no-repeat;
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.magnifier.visible {
+    display: block;
+    opacity: 1;
+}
+
+.info-bar {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: #555;
+}
+
+.info-bar .zoom-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-weight: 500;
+}
+
+.info-bar .zoom-value {
+    color: #1a73e8;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.info-bar .hint {
+    color: #999;
+    font-size: 12px;
+}
